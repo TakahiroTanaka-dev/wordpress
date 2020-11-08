@@ -18,6 +18,13 @@ function easiestwp_setup(){
   add_image_size('easiestwp-thumbnail', 190, 130, true);  
   add_image_size('easiestwp-hero', 1200, 630, true);
 
+  // カスタムメニューを有効化する
+  register_nav_menus(array(
+    'global' => 'Global Menu',
+    
+
+  ));
+
 }
 
 add_action('after_setup_theme', 'easiestwp_setup');
