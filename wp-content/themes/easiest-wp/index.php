@@ -8,13 +8,13 @@
 	<!-- ヘッダーのフック -->
 	<?php	wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 	<header class="page-header">
 		<div class="header-area">
 			<div class="panel-site-title">
-				<p class="site-title"><a href="index.html">Easiest WP</a></p>
-				<p class="site-subtitle">Just another WordPress site</p>
+				<p class="site-title"><a href="index.html"><?php bloginfo('name'); ?></a></p>
+				<p class="site-subtitle"><?php bloginfo('description'); ?></p>
 			</div>
 
 			<nav class="global-nav">
