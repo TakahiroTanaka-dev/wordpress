@@ -4,9 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Easiest WP</title>
-	<link rel="stylesheet" href="style.css" />
+	<!-- <link rel="stylesheet" href="style.css" /> -->
+	<!-- ヘッダーのフック -->
+	<?php	wp_head(); ?>
 </head>
 <body>
+<?php wp_body_open(); ?>
 	<header class="page-header">
 		<div class="header-area">
 			<div class="panel-site-title">
@@ -148,5 +151,7 @@
 			<p>Copyright ©  Gijutsu-Hyohron Co., Ltd.</p>
 		</div>
 	</footer>
+	<!-- footerのフック -->
+	<?php wp_footer(); ?>
 </body>
 </html>
