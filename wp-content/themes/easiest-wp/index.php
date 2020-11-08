@@ -2,9 +2,8 @@
 <!-- wordpressにひっす -->
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="UTF-8">
+	<meta charset=<?php bloginfo('charset'); ?>>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Easiest WP</title>
 	<!-- <link rel="stylesheet" href="style.css" /> -->
 	<!-- ヘッダーのフック -->
 	<?php	wp_head(); ?>
