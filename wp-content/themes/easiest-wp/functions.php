@@ -15,7 +15,7 @@ function easiestwp_setup(){
   add_theme_support('post-thumbnails');
 
 // 画像のサイズを調整するやつ、最後のtrueは画像を切り抜くかどうか
-  add_image_size('easiestwp-thumbnails', 190, 130, true);  
+  add_image_size('easiestwp-thumbnail', 190, 130, true);  
   add_image_size('easiestwp-hero', 1200, 630, true);
 
 }
