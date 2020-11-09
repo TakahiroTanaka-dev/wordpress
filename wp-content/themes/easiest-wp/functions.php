@@ -21,11 +21,17 @@ function easiestwp_setup(){
   // カスタムメニューを有効化する
   register_nav_menus(array(
     'global' => 'Global Menu',
-    
-
   ));
 
 }
 
 add_action('after_setup_theme', 'easiestwp_setup');
+
+// ウィジェットを読み込む関数
+function easiestwp_widgets_init(){
+  register_widget(array(
+    'name' => 'Sidebar',
+    'id' => 'sidebar'
+  ));
+}
 ?>
