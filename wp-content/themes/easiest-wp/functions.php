@@ -34,4 +34,6 @@ function easiestwp_widgets_init(){
     'id' => 'sidebar'
   ));
 }
+
+add_action('widgets_init', 'easiestwp_widgets_init');
 ?>
