@@ -21,8 +21,6 @@ function easiestwp_setup(){
   // カスタムメニューを有効化する
   register_nav_menus(array(
     'global' => 'Global Menu',
-    
-
   ));
 
 }
