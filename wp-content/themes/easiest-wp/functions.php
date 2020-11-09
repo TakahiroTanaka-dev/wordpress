@@ -29,7 +29,7 @@ add_action('after_setup_theme', 'easiestwp_setup');
 
 // ウィジェットを読み込む関数
 function easiestwp_widgets_init(){
-  register_widget(array(
+  register_sidebar(array(
     'name' => 'Sidebar',
     'id' => 'sidebar'
   ));
