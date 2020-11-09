@@ -26,6 +26,7 @@
 				</ul>
 			</nav> -->
 
+			<!-- グローバルメニューを表示 -->
 			<?php if (has_nav_menu('global')):?>
 				<?php wp_nav_menu(array(
 					'theme_location' => 'global',
