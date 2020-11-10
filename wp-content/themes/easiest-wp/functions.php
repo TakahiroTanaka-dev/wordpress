@@ -33,6 +33,12 @@ function easiestwp_widgets_init(){
     'name' => 'Sidebar',
     'id' => 'sidebar'
   ));
+
+// footerのウィジェットを追加
+  register_sidebar(array(
+    'name' => 'Footer',
+    'id' => 'footer',
+  ));
 }
 
 add_action('widgets_init', 'easiestwp_widgets_init');
