@@ -57,47 +57,25 @@
 			
 
 		</div>
-
-		<ul class="side-column">
-			<li class="widget">
-				<form class="searchform">
-					<div>
-						<input type="text">
-						<input value="検索" type="submit">
-					</div>
-				</form>
-			</li>
-			<li class="widget">
-				<h2 class="widgettitle">最近の投稿</h2>
-				<ul>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-				</ul>
-			</li>
-			<li class="widget">
-				<h2 class="widgettitle">カテゴリー</h2>
-				<ul>
-					<li><a href="archive.html">カテゴリ名</a></li>
-					<li><a href="archive.html">カテゴリ名</a></li>
-					<li><a href="archive.html">カテゴリ名</a></li>
-				</ul>
-			</li>
-		</ul>
+		<?php if(is_active_sidebar('sidebar')): ?>
+			<ul class="side-column">
+				<?php dynamic_sidebar('sidebar'); ?>
+			</ul>
+		<?php endif; ?>
 
 	</div>
 
 	<footer class="page-footer">
 		<div class="footer-widget-area">
-			<ul class="footer-widgets">
-				<li><a href="#"><img src="http://placehold.it/320x80"></a></li>
-				<li><a href="#"><img src="http://placehold.it/320x80"></a></li>
-				<li><a href="#"><img src="http://placehold.it/320x80"></a></li>
-			</ul>
+
+		<!-- フッターのウィジェットをPHPで表示 -->
+			<?php if(is_active_sidebar('footer')): ?>
+				<ul class="footer-widgets">
+					<?php dynamic_sidebar('footer'); ?>
+				</ul>
+			<?php endif; ?>
 			<div class="back-to-top">
-				<a href="#"><img src="images/arrow-up.png" srcset="images/arrow-up@2x.png 2x" alt="">TOP</a>
+				<a href="#"><img src="<?php echo esc_url(get_theme_file_uri()); ?>/images/arrow-up.png" srcset="<?php echo esc_url(get_theme_file_uri()); ?>/images/arrow-up@2x.png 2x" alt="">TOP</a>
 			</div>
 		</div>
 		<div class="copyright">
