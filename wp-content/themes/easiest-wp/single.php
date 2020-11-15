@@ -1,30 +1,4 @@
-<!DOCTYPE HTML>
-<html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Easiest WP</title>
-	<link rel="stylesheet" href="style.css" />
-</head>
-<body>
-	<header class="page-header">
-		<div class="header-area">
-			<div class="panel-site-title">
-				<p class="site-title"><a href="index.html">Easiest WP</a></p>
-				<p class="site-subtitle">Just another WordPress site</p>
-			</div>
-
-			<nav class="global-nav">
-				<ul id="global-menu" class="menu">
-					<li class="current-menu-item"><a href="index.html">ホーム</a></li>
-					<li><a href="portfolio.html">ポートフォリオ</a></li>
-					<li><a href="profile.html">プロフィール</a></li>
-					<li><a href="contact.html">お問い合わせ</a></li>
-				</ul>
-			</nav>
-
-		</div>
-	</header>
+<?php get_header(); ?>
 
 	<div class="hero eyecatch">
 		<img src="http://placehold.it/1200x630">
@@ -135,51 +109,8 @@
 
 		</div>
 
-		<ul class="side-column">
-			<li class="widget">
-				<form class="searchform">
-					<div>
-						<input type="text">
-						<input value="検索" type="submit">
-					</div>
-				</form>
-			</li>
-			<li class="widget">
-				<h2 class="widgettitle">最近の投稿</h2>
-				<ul>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-				</ul>
-			</li>
-			<li class="widget">
-				<h2 class="widgettitle">カテゴリー</h2>
-				<ul>
-					<li><a href="archive.html">カテゴリ名</a></li>
-					<li><a href="archive.html">カテゴリ名</a></li>
-					<li><a href="archive.html">カテゴリ名</a></li>
-				</ul>
-			</li>
-		</ul>
+		<?php get_sidebar(); ?>
 
 	</div>
 
-	<footer class="page-footer">
-		<div class="footer-widget-area">
-			<ul class="footer-widgets">
-				<li><a href="#"><img src="http://placehold.it/320x80"></a></li>
-				<li><a href="#"><img src="http://placehold.it/320x80"></a></li>
-				<li><a href="#"><img src="http://placehold.it/320x80"></a></li>
-			</ul>
-			<div class="back-to-top">
-				<a href="#"><img src="images/arrow-up.png" srcset="images/arrow-up@2x.png 2x" alt="">TOP</a>
-			</div>
-		</div>
-		<div class="copyright">
-			<p>Copyright ©  Gijutsu-Hyohron Co., Ltd.</p>
-		</div>
-	</footer>
-</body>
-</html>
+	<?php get_footer(); ?>
