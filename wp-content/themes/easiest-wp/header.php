@@ -35,6 +35,5 @@
 					'container_class' => 'global-nav'
 				)); ?>
 			<?php endif; ?>
-
 		</div>
 	</header>
