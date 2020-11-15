@@ -7,8 +7,9 @@ function easiestwp_scripts(){
 
 add_action('wp_enqueue_scripts', 'easiestwp_scripts');
 
-// タイトルを読み込むやつ
+// easiest-wpのセットアップ
 function easiestwp_setup(){
+  // タイトルを読み込むやつ
   add_theme_support('title-tag');
 
   // サムネイルを表示するやつ
@@ -21,6 +22,12 @@ function easiestwp_setup(){
   // カスタムメニューを有効化する
   register_nav_menus(array(
     'global' => 'Global Menu',
+  ));
+
+  // コメント一覧とフォーム部分にhtml5のマークアップを適用
+  add_theme_support('html5', array(
+    'comment-form',
+    'comment-list',
   ));
 
 }
