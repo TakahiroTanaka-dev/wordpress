@@ -14,11 +14,11 @@
 	<?php get_header(); ?>
 
 	<div class="page-title">
-		<h1><?php the_archive_title(); ?></h1>
+		<h1>「<?php the_search_query(); ?>」の検索結果</h1>
 	</div>
 	<div class="content-area has-side-col">
 		<div class="main-column">
-			<h1 class="box-heading box-heading-main-col"><?php the_archive_title(); ?></h1>
+			<h1 class="box-heading box-heading-main-col">「<?php the_search_query(); ?>」の検索結果</h1>
 			<div class="box-content">
 
 			<!-- こっから記事があれば表示される -->
@@ -46,7 +46,7 @@
 						<?php endwhile; ?>
 					</ul>
 				<?php else :?>
-					<p>投稿はありません</p>
+					<p>何も見つかりませんでした。</p>
 				<?php endif;?>
 			</div>
 
