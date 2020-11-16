@@ -14,41 +14,15 @@
 	<?php get_header(); ?>
 
 	<div class="page-title">
-		<h1><?php the_archive_title(); ?></h1>
+		<h1>Not Found</h1>
 	</div>
 	<div class="content-area has-side-col">
 		<div class="main-column">
-			<h1 class="box-heading box-heading-main-col"><?php the_archive_title(); ?></h1>
+			<h1 class="box-heading box-heading-main-col">Not Found</h1>
 			<div class="box-content">
 
-			<!-- こっから記事があれば表示される -->
-				<?php if(have_posts()): ?>
-					<ul class="archive">
-						
-						<!-- こっからループ処理 -->
-						<?php while(have_posts()): ?>
-							<?php the_post(); ?>
-							<li class="item-archive">
-								<div class="time-and-thumb-archive">
-									<time class="pub-date" datetime=<?php echo get_the_date('DATE_W3C') ?>><?php echo get_the_date() ?></time>
-
-									<!-- PHP使ってループ処理の中でサムネイルを適用した -->
-									<?php if(has_post_thumbnail()): ?>
-										<p class="thumb thumb-archive"><a href=<?php the_permalink(); ?>><?php the_post_thumbnail('easiestwp-thumbnail') ?></a></p>
-									<?php endif; ?>
-
-								</div>
-								<div class="data-archive">
-									<p class="list-categories-archive"><?php the_category(','); ?></p>
-									<h2 class="title-archive"><a href=<?php the_permalink(); ?>><?php the_title(); ?></a></h2>
-									<p class="list-tags-archive"><?php the_tags(); ?></p>
-								</div>
-						<?php endwhile; ?>
-					</ul>
-				<?php else :?>
-					<p>投稿はありません</p>
-				<?php endif;?>
-			</div>
+			<!-- 404notfoundの表示 -->
+			<p>お探しのページは見つかりませんでした。</p>
 
 			<!-- 最下部のページネーションを表示 -->
 			<?php the_posts_pagination(array(
