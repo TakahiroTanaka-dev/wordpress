@@ -13,7 +13,9 @@
 	
 	<?php get_header(); ?>
 
-	<div class="hero"></div>
+	<div class="page-title">
+		<h1><?php the_archive_title(); ?></h1>
+	</div>
 	<div class="content-area has-side-col">
 		<div class="main-column">
 			<h1 class="box-heading box-heading-main-col">Blog</h1>
