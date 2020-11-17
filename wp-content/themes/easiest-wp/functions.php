@@ -54,9 +54,19 @@ add_action('widgets_init', 'easiestwp_widgets_init');
 // カスタマイズAPI
 
 function easiestwp_customize_register($wp_customize){
+// ここでパネル、セクション、コントロール、セッティングを追加します
+  $wp_customize -> add_section('theme_options', array(
+    'title' => 'Theme Options',
+    'priority' => 130,
+  ));
+
+  // セッティングを追加する
+  $wp_customize -> add_setting('front_page_content_1', array(
+    'default' => false,
+    'sanitize_callback' => 'absint',
+  ));
 
 }
-
 
 add_action('customize_register', 'easiestwp_customize_register')
 ?>
