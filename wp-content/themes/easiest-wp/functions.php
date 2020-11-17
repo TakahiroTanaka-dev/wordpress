@@ -49,4 +49,14 @@ function easiestwp_widgets_init(){
 }
 
 add_action('widgets_init', 'easiestwp_widgets_init');
+
+
+// カスタマイズAPI
+
+function easiestwp_customize_register($wp_customize){
+
+}
+
+
+add_action('customize_register', 'easiestwp_customize_register')
 ?>
