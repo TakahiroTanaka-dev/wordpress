@@ -66,6 +66,14 @@ function easiestwp_customize_register($wp_customize){
     'sanitize_callback' => 'absint',
   ));
 
+  // コントロールを追加する
+  $wp_customize -> add_control(array(
+    'label' => 'Front Page Content 1',
+    'section' => 'theme_options',
+    'type' => 'dropdown-page',
+    'allow-addition' => true,
+  ));
+
 }
 
 add_action('customize_register', 'easiestwp_customize_register')
