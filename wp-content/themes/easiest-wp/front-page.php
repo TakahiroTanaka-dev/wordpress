@@ -22,6 +22,10 @@
 			<?php for ($i = 1; $i <= 5; $i++) : ?>
 				<!-- get_theme_modでfront_page_content_1~5に登録されているかどうかを判定する -->
 				<?php if (get_theme_mod('front_page_content' . $i)) : ?>
+					<?php
+						$post=get_post(get_theme_mod('front_page_content'.$i));
+						setup_postdata($post);
+						?>
 					<h1 class="box-heading box-heading-main-col">Blog</h1>
 					<div class="box-content">
 
@@ -55,6 +59,8 @@
 					</div>
 						<?php endif; ?>
 			<?php endfor; ?>
+
+			<?php wp_reset_postdata(); ?>
 
 			<!-- 最下部のページネーションを表示 -->
 			<?php the_posts_pagination(array(
