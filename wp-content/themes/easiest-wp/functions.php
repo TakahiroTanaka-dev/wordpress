@@ -61,20 +61,23 @@ function easiestwp_customize_register($wp_customize){
   ));
 
   // セッティングを追加する
-  $wp_customize -> add_setting('front_page_content_1', array(
+  for($i=1; $i <= 5; $i++){
+  $wp_customize -> add_setting('front_page_content_'.$i, array(
     'default' => false,
     'sanitize_callback' => 'absint',
   ));
 
   // コントロールを追加する
-  $wp_customize -> add_control(array(
-    'label' => 'Front Page Content 1',
+  
+  $wp_customize -> add_control('front_page_content_'.$i,array(
+    'label' => 'Front Page Content '.$i,
     'section' => 'theme_options',
-    'type' => 'dropdown-page',
+    'type' => 'dropdown-pages',
     'allow-addition' => true,
   ));
+  }
 
 }
 
-add_action('customize_register', 'easiestwp_customize_register')
+add_action('customize_register', 'easiestwp_customize_register');
 ?>
