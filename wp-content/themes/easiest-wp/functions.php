@@ -49,4 +49,35 @@ function easiestwp_widgets_init(){
 }
 
 add_action('widgets_init', 'easiestwp_widgets_init');
+
+
+// カスタマイズAPI
+
+function easiestwp_customize_register($wp_customize){
+// ここでパネル、セクション、コントロール、セッティングを追加します
+  $wp_customize -> add_section('theme_options', array(
+    'title' => 'Theme Options',
+    'priority' => 130,
+  ));
+
+  // セッティングを追加する
+  for($i=1; $i <= 5; $i++){
+  $wp_customize -> add_setting('front_page_content_'.$i, array(
+    'default' => false,
+    'sanitize_callback' => 'absint',
+  ));
+
+  // コントロールを追加する
+  
+  $wp_customize -> add_control('front_page_content_'.$i,array(
+    'label' => 'Front Page Content '.$i,
+    'section' => 'theme_options',
+    'type' => 'dropdown-pages',
+    'allow-addition' => true,
+  ));
+  }
+
+}
+
+add_action('customize_register', 'easiestwp_customize_register');
 ?>
