@@ -26,7 +26,7 @@
 						$post=get_post(get_theme_mod('front_page_content'.$i));
 						setup_postdata($post);
 						?>
-					<h1 class="box-heading box-heading-main-col">Blog</h1>
+					<h1 class="box-heading box-heading-main-col"><?php the_title(); ?></h1>
 					<div class="box-content">
 
 						<!-- こっから記事があれば表示される -->
