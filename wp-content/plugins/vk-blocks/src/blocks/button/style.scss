@@ -1,0 +1,140 @@
+.vk_button {
+	margin: 5px 0;
+	text-align: center; /* テキストのみの時のセンター揃え */
+	&-color-custom {
+		a:hover {
+			opacity: 0.8;
+			box-shadow: 0 0 0 0.2rem rgba(171, 184, 195, 0.25);
+		}
+	}
+
+	&-align {
+		&-left {
+			text-align: left;
+		}
+
+		&-center {
+			text-align: center;
+		}
+
+		&-right {
+			text-align: right;
+		}
+
+		&-block {
+			display: block;
+		}
+		&-wide {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 70%;
+			.btn {
+				display: block;
+			}
+		}
+	}
+
+	&_link {
+		min-width: 100px;
+		min-height: 30px;
+
+		&-type-text {
+			box-shadow: none;
+			padding: 0;
+			&:hover {
+				background: none;
+				box-shadow: none;
+			}
+		}
+
+		&.btn {
+			// .btn指定がないと管理画面で標準の .btn の指定に負ける
+			padding-top: 0.7em;
+			padding-bottom: 0.6em;
+			user-select: text;
+		}
+
+		&_before {
+			margin-right: 0.7rem;
+		}
+
+		&_after {
+			margin-left: 0.7rem;
+		}
+
+		&_subCaption {
+			display: block;
+			overflow: hidden;
+			margin: 0;
+			font-size: 80%;
+		}
+	}
+	.vk_button_link-type-text{
+		&:hover{
+			&.btn-outline-primary{color: #007bff;}
+			&.btn-outline-secondary{color: #6c757d;}
+			&.btn-outline-success{color: #28a745;}
+			&.btn-outline-info{color: #17a2b8;}
+			&.btn-outline-warning{color: #ffc107;}
+			&.btn-outline-danger{color: #dc3545;}
+			&.btn-outline-dark{	color: #343a40;}
+		}
+		&.btn-outline-light{ color: #212529; }
+	}
+
+	.editor-styles-wrapper &{ 
+		//.editor-styles-wrapper a:not([href])に負けるので追加
+		a,
+		a:hover{
+			&.btn-primary{ background-color: #007bff; border-color: #007bff; }
+			&.btn-primary,
+			&.btn-secondary,
+			&.btn-success,
+			&.btn-info,
+			&.btn-danger,
+			&.btn-dark {
+				color: #fff;
+			}
+		}
+		a{
+			&.vk_button_link-type-text:hover.btn-outline-primary{
+				color: #007bff;
+			}
+			&.btn-outline-primary{
+				color: #007bff; 
+				border-color: #007bff;
+				&:hover:not(.vk_button_link-type-text){
+					background-color:#007bff;
+				}
+			}
+			&.btn-outline-secondary{color: #6c757d;}
+			&.btn-outline-success{color: #28a745;}
+			&.btn-outline-info{color: #17a2b8;}
+			&.btn-outline-warning{color: #ffc107;}
+			&.btn-outline-danger{color: #dc3545;}
+			&.btn-outline-dark{	color: #343a40;}
+		}
+		a:hover{
+			&.btn-outline-primary,
+			&.btn-outline-secondary,
+			&.btn-outline-success,
+			&.btn-outline-info,
+			&.btn-outline-danger,
+			&.btn-outline-dark{
+				color: #fff;
+			}
+		}
+	}
+	.editor-rich-text {
+		// Font Awesomeアイコンが管理画面側で改行されないために inline-block を指定
+		display: inline-block;
+	}
+}
+
+.vk_button-color-custom {
+	.vk_button_link-type-text:hover {
+		box-shadow: none;
+	}
+}
+

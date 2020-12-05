@@ -1,0 +1,85 @@
+/*-------------------------------------------*/
+/* Layout
+/*-------------------------------------------*/
+.vk_prContent {
+	margin-left: -15px;
+	margin-right: -15px;
+	@media (min-width: 576px) {
+		display: flex;
+		.col-sm-6 {
+			width: 50%;
+		}
+		&-layout {
+			&-imageLeft {
+				flex-direction: row;
+			}
+
+			&-imageRight {
+				flex-direction: row-reverse;
+			}
+
+			&-imageLeft .vk_prContent_colImg {
+				padding-right: 2em;
+			}
+
+			&-imageRight .vk_prContent_colImg {
+				padding-left: 2em;
+			}
+		}
+	} // @media (min-width: 768px) {
+}
+
+/*-------------------------------------------*/
+/* others
+/*-------------------------------------------*/
+.vk_prContent {
+	&_colTxt {
+		vertical-align: top;
+		&_title {
+			background-color: transparent;
+			font-weight: bold;
+			margin-bottom: 0.8em;
+			outline: unset;
+			outline-offset: unset;
+			box-shadow: unset;
+			border: none;
+			border-radius:unset;
+			padding: 0;
+			color: inherit;
+			line-height: 1.5;
+			text-align: left; /* 見出しに左右線デザインを当てられている場合があるので上書きする */
+			@media (max-width: 575.98px) {
+				&:first-child {
+					margin-top: 30px;
+				}
+			}
+			&:before,
+			&:after {
+				content: none;
+
+			}
+		}
+		&_text {
+			line-height: 1.8;
+			margin-bottom: 1.7em;
+		}
+		&_btn.btn {
+			@media (min-width: 992px) {
+				font-size: 16px;
+			}
+		}
+	} // &_colTxt {
+	&_colImg {
+		&_image {
+			max-width: 100%;
+			height: auto;
+		}
+		.components-button.button {
+			margin: 1em;
+		}
+		.components-button.image-button {
+			margin: 0;
+			height: auto; //これがないとfirefoxの管理画面上でbutton内のimage画像が上にはみ出す
+		}
+	}
+} // .vk_prContent {
